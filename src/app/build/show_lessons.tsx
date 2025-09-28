@@ -11,16 +11,15 @@ export default function ShowLessons({ pick_lesson }: Props) {
 
     useEffect(() => {
         const saved = localStorage.getItem('plans_elements');
+        console.log(saved);
         if (saved != null) {
             for (let i = 1; i < saved.length + 1; i++) {
                 const data : any = JSON.parse(localStorage.getItem(`lesson_${i}`) || '{}');
-                const plan = data as {type: string, title: string, week: number, day: number, index: number};
+                const plan = data as {itemType: string, title: string, week: number, day: number, index: number};
                 if (plan.title === undefined) {
-                    plan.title = `lesson ${i}`;
-                } else {
-                    plan.title += ` (Week ${plan.week}, Day ${plan.day})`;
+                    continue;
                 }
-                setElements(prev => [...prev, `${plan.type} + ${plan.title}`]);
+                setElements(prev => [...prev, `${plan.itemType} + ${plan.title}`]);
 
             }
         }
@@ -34,11 +33,11 @@ export default function ShowLessons({ pick_lesson }: Props) {
     const handleClick = () => {
         {   
             interface Plan  {
-                type: string;
+                itemType: string;
                 title: string;
                 description: string;
-                week: number;
-                day: number;
+                weekNumber: number;
+                dayNumber: number;
                 index: number;
             }
             
@@ -46,11 +45,11 @@ export default function ShowLessons({ pick_lesson }: Props) {
             const data : any = JSON.parse(localStorage.getItem(`lesson_${elements.length + 1}`) || '{}');
             const plan : Plan = data as Plan;
             if (plan.title === undefined) {
-                plan.title = `${plan.type} ${elements.length + 1}`;
+                plan.title = `${plan.itemType} ${elements.length + 1}`;
                 setElements(prev => [...prev, `${plan.title}`]);
             } else {
-                plan.title += ` (Week ${plan.week}, Day ${plan.day})`;
-                setElements(prev => [...prev, `${plan.type} + ${plan.title}`]);
+                plan.title += ` (Week ${plan.weekNumber}, Day ${plan.dayNumber})`;
+                setElements(prev => [...prev, `${plan.itemType} + ${plan.title}`]);
             }
             
         }

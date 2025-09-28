@@ -46,7 +46,7 @@ export default function EditLesson({ lesson_idx }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const curriculumData = {
-        type: item.itemType,
+        itemType: item.itemType,
         title: item.title,
         description: item.description,
         week: item.weekNumber,
@@ -88,6 +88,7 @@ export default function EditLesson({ lesson_idx }: Props) {
             <h3 className="text-2xl font-semibold text-white mb-2">{selectedType} Details</h3>
 
             <input
+
               type="text"
               name="title"
               placeholder="Title"

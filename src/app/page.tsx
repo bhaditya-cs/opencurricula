@@ -50,9 +50,11 @@ export default function Home() {
               Start Building
             </button>
           </Link>
-          <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-2xl shadow-md font-semibold max-w-sm">
-            Explore Curriculum
-          </button>
+          <Link href="/explore">
+            <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-2xl shadow-md font-semibold max-w-sm">
+              Explore Curriculum
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -60,7 +62,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-auto text-gray-400 text-sm text-center pt-12">
         <p>Made for the 2025 WarriorHacks - Aditya Bhadra & Atharv Sondhi</p>
-        <p>Lisenced under MIT License</p>
+
       </footer>
     </div>
   );
