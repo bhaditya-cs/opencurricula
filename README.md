@@ -10,6 +10,9 @@ Open Curricula solves this issues by creating a platform for educators, where th
 - Share Curriculum: Upload lesson plans, projects, syllabi, and teaching resources.
 - Discover Resources: Browse and search for high-quality, peer-reviewed materials created by teachers worldwide.
 
+## Run Locally
+The front end can be easily run by running `npm run dev` in the root directory.
+
 ## Technologies and Libraries used
 ### Front end
 The front end uses React, Next.js, and Tailwind to create a modern, professional website that has server side rendering and abilities to work with our backend APIs.
