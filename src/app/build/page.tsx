@@ -2,6 +2,7 @@
 import Link from "next/link";
 import ShowLessons from "./show_lessons";
 import React, { useState } from 'react';
+import EditLesson from "./edit_lesson";
 
 export default function Build() {
     const [selected_lesson, select_lesson_idx] = useState(-1);
@@ -12,12 +13,12 @@ export default function Build() {
 
                 <div className="flex divide-x divide-gray-300 flex-1 overflow-auto w-full m-0 p-0">
                     <div className="flex p-8 w-1/2 gap-16">
-                        <ShowLessons select_lesson_idx={select_lesson_idx}/>
+                        <ShowLessons pick_lesson={select_lesson_idx}/>
                     </div>
 
                     <div className="p-4 w-1/2">
                         <h2 className="text-lg font-semibold">Component Two</h2>
-                        <p>{selected_lesson}</p>
+                        <EditLesson lesson_idx={selected_lesson}/>
                     </div>
                 </div>
             </div>

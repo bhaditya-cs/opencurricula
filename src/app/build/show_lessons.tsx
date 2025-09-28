@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 
 type Props = {
-  select_lesson_idx: (_: number) => void;
+    pick_lesson: (_: number) => void;
 }
-export default function ShowLessons({ select_lesson_idx} : Props) {
+export default function ShowLessons({ pick_lesson }: Props) {
 
     const [elements, setElements] = useState([]);
 
@@ -23,7 +23,7 @@ export default function ShowLessons({ select_lesson_idx} : Props) {
         </div>
         <div className="flex flex-col gap-4">
             {elements.map((el, idx) => (
-                <div key={idx} className="grid-container align-middle rounded-lg bg-blue-600 p-1" onClick={() => select_lesson_idx(idx)}>
+                <div key={idx} className="grid-container align-middle rounded-lg bg-blue-600 p-1" onClick={() => pick_lesson(idx)}>
                     <h2 className="p-0.5">{el}</h2>
                 </div>
             ))}
