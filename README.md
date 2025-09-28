@@ -27,4 +27,4 @@ The backend uses spring boot to handle API requests and act as a layer between t
  - [ ] Allow teachers to collaborate on the same curricula
  - [ ] Create analytics and data driven insights
 # License
-This project is licenced under the permissive MIT License
+This project is licenced under the permissive [MIT License](https://github.com/bhaditya-cs/opencurricula/blob/main/LICENSE)
