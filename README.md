@@ -8,7 +8,7 @@ Open Curricula was created to address this challenge directly by giving teachers
 Open Curricula solves this issues by creating a platform for educators, where they can:
 
 - Share Curriculum: Upload lesson plans, projects, syllabi, and teaching resources.
-- Discover Resources: Browse and search for high-quality, peer-reviewed materials created by teachers worldwide.
+- Discover Resources: Browse and search for high-quality & peer reviewed material
 
 ## Run Locally
 The front end can be easily run by running `npm run dev` in the root directory.
